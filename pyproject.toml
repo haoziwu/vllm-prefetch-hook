@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vllm-prefetch-hook"
+version = "0.1.0"
+requires-python = ">=3.10"
+
+[project.entry-points."vllm.general_plugins"]
+prefetch-hook = "vllm_prefetch_hook:register"
+
+[tool.setuptools.packages.find]
+where = ["src"]
